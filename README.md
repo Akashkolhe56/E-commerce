@@ -19,3 +19,13 @@ N - Node.js: Used as the runtime environment for executing the Express.js server
 Key Accomplishments
 
 Order Page: A basic order page was created, laying the groundwork for future order management features.
+
+
+
+Milestone 5: Project Overview -
+In this milestone we focused on creating a signup page for new users visiting the website,
+
+Key Learnings -
+
+We Learned how to create the UI for the Signup page using React and Tailwind CSS.
+We also learned how to use RegEx (Regular expressions) for the validation of the inputs on the signup page.
