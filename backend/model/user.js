@@ -64,23 +64,16 @@ const userSchema = new mongoose.Schema({
 //hash password
 
 userSchema.pre("save", async function (next) {
-    if (!this.isModified("password")) {
-      next();
-    }
+    if (!this.isModified("password")) {next();}
     this.password = await bcrypt.hash(this.password, 10);
   });
   
   //json webtoken
   
-  userSchema.methods.getJywtToken = function () {
-    return jwt.sign({ id: this_id },process.env.JWT_SECRT_KEY,{
-        expiresIn:process.env.JWT_EXPIRES,
-    })
+  userSchema.methods.getJywtToken = function () {return jwt.sign({ id: this_id },process.env.JWT_SECRT_KEY,{expiresIn:process.env.JWT_EXPIRES,})
   }
 
   //COMPARE PASSWORD
-  userSchema.methods.comparePassword =async function (enteredPassword){
-    return await bcrypt.compare(enteredPassword, this.password);
-  }
+  userSchema.methods.comparePassword =async function (enteredPassword){return await bcrypt.compare(enteredPassword, this.password);}
 
   module.exports=mongoose.model('User',userSchema)
