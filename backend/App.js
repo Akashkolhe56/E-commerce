@@ -4,7 +4,7 @@ const { connect } = require('mongoose')
 const ErrorHandler = require('./utils/ErrorHandler')
 const cookieParser=require('cookie-parser');
 const bodyParser=require('body-parser')
-const app=express()
+const cors=require('cors')
 
 app.use(express.json());
 app.use(cookieParser());
