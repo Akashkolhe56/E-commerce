@@ -19,3 +19,10 @@ N - Node.js: Used as the runtime environment for executing the Express.js server
 Key Accomplishments
 
 Order Page: A basic order page was created, laying the groundwork for future order management features.
+
+
+## Milestone 8
+
+In this milestone we need to create the product page
+Techstack we have used here is React
+for styling we have used tailwind css
