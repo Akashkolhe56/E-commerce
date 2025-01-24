@@ -19,3 +19,11 @@ N - Node.js: Used as the runtime environment for executing the Express.js server
 Key Accomplishments
 
 Order Page: A basic order page was created, laying the groundwork for future order management features.
+
+## Milestone 7: Project Overview -
+In this milestone we learned the following things -
+
+Key learnings -
+
+We learned and created Login Endpoint.
+We have also created password and email validation.
