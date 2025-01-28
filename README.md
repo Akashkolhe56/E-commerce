@@ -20,6 +20,7 @@ Key Accomplishments
 
 Order Page: A basic order page was created, laying the groundwork for future order management features.
 
+
 ## Milestone 2: Project Overview - 
 
 In this milestone we learned how to setup a development enviroment for a backend project and also started with making Basic UI for Login page.-
