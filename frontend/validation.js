@@ -1,6 +1,6 @@
 const validationFormObject={
     validateName:(name)=>{
-        constanameRegex = /^[a-zA-Z][a-zA-Z\s'-]{1,49}$/;
+        const nameRegex = /^[a-zA-Z][a-zA-Z\s'-]{1,49}$/;
         if (name.lenght<2) {
             return 'Name cannot have less then 2 letters'
         }
@@ -21,7 +21,7 @@ const validationFormObject={
           if(password.length<passwordRegex.minLength){
             return 'Password should be more than or equal to 8 chars'
           }
-          if(password.length>passwordRegex.maxLenght){
+          if(password.length>passwordRegex.maxLength){
             return 'Password should be less than or equal to 128 chars'
           }
           if(!passwordRegex.hasUpperCase.test(password)){
@@ -30,7 +30,7 @@ const validationFormObject={
           if(!passwordRegex.hasLowerCase.test(password)){
             return 'Password should have at least one lowercase letter'
           }
-          if(!passwordRegex.hasSecialChar.test(password)){
+          if(!passwordRegex.hasSpecialChar.test(password)){
             return 'Password should have atleast 1 spl char'
           }
           return true;
