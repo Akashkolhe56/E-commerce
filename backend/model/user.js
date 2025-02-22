@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-// const bcrypt = require("bcrypt");
-// const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 const userSchema = new mongoose.Schema({
   name:{
@@ -101,4 +101,4 @@ const userSchema = new mongoose.Schema({
 //   return await bcrypt.compare(enteredPassword, this.password);
 // };
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.models.User || mongoose.model("User", userSchema);
