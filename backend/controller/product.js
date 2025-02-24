@@ -173,22 +173,21 @@ router.put('/update-product/:id', pupload.array('images', 10), async (req, res) 
 
 router.delete('/delete-product/:id', async (req, res) => {
     const { id } = req.params;
-
     try {
-        const existingProduct = await Product.findById(id);
-        if (!existingProduct) {
+        const product = await Product.findById(id);
+        if (!product) {
             return res.status(404).json({ error: 'Product not found.' });
         }
-
-        await existingProduct.deleteOne();
-        res.status(200).json({ message: '✅ Product deleted successfully' });
+        await product.deleteOne();
+        res.status(200).json({ message: 'Product deleted successfully' });
     } catch (err) {
         console.error('Server error:', err);
         res.status(500).json({ error: 'Server error. Could not delete product.' });
     }
-});
+}
+);
 
-
+// Milestone 17
 router.post('/cart', async (req, res) => {
     try {
         const { userId, productId, quantity } = req.body;
@@ -240,7 +239,7 @@ router.post('/cart', async (req, res) => {
 
 
 
-// GET cart details endpoint
+// Milestone 18:GET cart details endpoint
 router.get('/cartproducts', async (req, res) => {
     try {
         const { email } = req.query;
@@ -264,6 +263,7 @@ router.get('/cartproducts', async (req, res) => {
     }
 });
 
+// Milestone 19: Update cart product quantity endpoint
 router.put('/cartproduct/quantity', async (req, res) => {
     const { email, productId, quantity } = req.body;
     console.log("Updating cart product quantity");
@@ -297,5 +297,4 @@ router.put('/cartproduct/quantity', async (req, res) => {
 });
 
 
-
-module.exports = router;
+module.exports=router;
