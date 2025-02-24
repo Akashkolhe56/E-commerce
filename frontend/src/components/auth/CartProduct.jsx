@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { IoIosAdd, IoIosRemove } from "react-icons/io";
-
+import PropTypes from "prop-types";
 
 export default function CartProduct({ _id, name, images, quantity, price }) {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -83,3 +83,11 @@ export default function CartProduct({ _id, name, images, quantity, price }) {
     );
 }
 
+CartProduct.propTypes = {
+  _id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  description: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  quantity: PropTypes.number.isRequired
+};
