@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState , useNavigate} from "react";
 import AddressCard from "../components/auth/AddressCard";
 import Nav from "../components/auth/nav";
 
@@ -9,6 +9,7 @@ export default function Profile() {
 		phoneNumber: "",
 		avatarUrl: "",
 	});
+	const navigate = useNavigate();
 
 	const [addresses, setAddresses] = useState([]);
 
@@ -35,6 +36,10 @@ export default function Profile() {
 				console.log("Addresses fetched:", data.addresses);
 			});
 	}, []);
+	const handleAddAddress = () => {
+        navigate("/create-address");
+    };
+	
 
 
 	return (
