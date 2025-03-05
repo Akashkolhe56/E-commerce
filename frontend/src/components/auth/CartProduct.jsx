@@ -52,7 +52,8 @@ export default function CartProduct({ _id, name, images, quantity, price }) {
             });
     };
 
-    const currentImage = images[currentIndex];
+    const currentImage = images?.length ? images[currentIndex] : null;
+
 
     return (
         <div className="flex flex-col md:flex-row justify-between items-center p-4 border-b border-neutral-300 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -84,10 +85,10 @@ export default function CartProduct({ _id, name, images, quantity, price }) {
 }
 
 CartProduct.propTypes = {
-  _id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  images: PropTypes.arrayOf(PropTypes.string).isRequired,
-  description: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  quantity: PropTypes.number.isRequired
+  _id: PropTypes.string,
+  name: PropTypes.string,
+  images: PropTypes.arrayOf(PropTypes.string),
+  description: PropTypes.string,
+  price: PropTypes.number,
+  quantity: PropTypes.number
 };

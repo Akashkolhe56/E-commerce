@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 const Cart = () => {
 
     const [products, setProducts] = useState([]);
-    const email="akashkolhe@gmail.com"
+    const email="akashc@gmail.com"
 
     useEffect(() => {
         fetch(`http://localhost:8000/api/v2/product/cartproducts?email=${email}`)
