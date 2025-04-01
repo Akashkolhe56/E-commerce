@@ -26,3 +26,6 @@ Order Page: A basic order page was created, laying the groundwork for future ord
 In this milestone we need to create the product page
 Techstack we have used here is React
 for styling we have used tailwind css
+
+## Milestone 12: Project Overview -
+In this milestone, we created an API endpoint to filter data by email from MongoDB and dynamically display it on the home page using the previously created product card.
