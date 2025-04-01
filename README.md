@@ -26,3 +26,5 @@ Order Page: A basic order page was created, laying the groundwork for future ord
 In this milestone we need to create the product page
 Techstack we have used here is React
 for styling we have used tailwind css
+## Milestone 13: Project Overview -
+In this milestone we learned how to implement the Edit Feature for the My Products Page, including designing an edit form with pre-filled product details, handling form submissions, and making API requests to update the backend database.
