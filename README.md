@@ -26,3 +26,5 @@ Order Page: A basic order page was created, laying the groundwork for future ord
 In this milestone we need to create the product page
 Techstack we have used here is React
 for styling we have used tailwind css
+## Milestone 24: Project Overview -
+In this milestone we created the frontend for the orderComfinmation page in our E - commerce website.
