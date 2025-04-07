@@ -26,3 +26,6 @@ Order Page: A basic order page was created, laying the groundwork for future ord
 In this milestone we need to create the product page
 Techstack we have used here is React
 for styling we have used tailwind css
+
+## Milestone 29
+in this milestone we have done payment intigration using paypal
