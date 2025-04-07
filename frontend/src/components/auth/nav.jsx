@@ -22,7 +22,8 @@ const NavBar = () => {
             { name: "My Products", path: "/my-products" },
             { name: "Add Products", path: "/create-product" },
             { name: "Cart", path: "/cart" },
-            { name: "Profile", path: "/profile" }
+            { name: "Profile", path: "/profile" },
+            { name: "My orders", path:"/myorders"}
           ].map((link) => (
             <NavLink
               key={link.path}
