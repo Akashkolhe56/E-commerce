@@ -26,3 +26,20 @@ Order Page: A basic order page was created, laying the groundwork for future ord
 In this milestone we need to create the product page
 Techstack we have used here is React
 for styling we have used tailwind css
+
+## Milestone 32: Project Overview -
+In this milestone we learned the following things -
+
+Key learning -
+
+- In Login page we have use Dispatch method to store the mail inside global state
+- In all the remaining pages the mail used is stored in global state using useSelector
+
+## Milestone 33: Project Overview -
+In this milestone we learned the following things -
+
+Key learning -
+
+- Using sign method to create an JWT token with mail and ID
+- Returning maxAge to set expire time
+- Added the cookie inside the response that helps in storing the cookie inside browser.
