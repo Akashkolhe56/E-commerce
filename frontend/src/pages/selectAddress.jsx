@@ -4,6 +4,9 @@ import axios from 'axios';
 import Nav from '../components/auth/nav'; // Ensure correct casing
 import { useNavigate } from 'react-router-dom';
 
+import { useSelector } from 'react-redux'; // Import useSelector
+
+
 const SelectAddress = () => {
     const [addresses, setAddresses] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -11,9 +14,13 @@ const SelectAddress = () => {
     const navigate = useNavigate();
 
     // Replace with dynamic email in production
-    const userEmail = 'akashc@gmail.com';
+    // Retrieve email from Redux state
+    const userEmail = useSelector((state) => state.user.email);
+
+
 
     useEffect(() => {
+        if (!userEmail) return;
         const fetchAddresses = async () => {
             try {
                 const response = await axios.get('http://localhost:8000/api/v2/user/addresses', {

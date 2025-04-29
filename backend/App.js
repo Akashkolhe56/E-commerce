@@ -1,4 +1,3 @@
-
 const express = require("express");
 const app = express();
 const ErrorHandler = require("./middleware/error");
@@ -13,7 +12,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(cookieParser());
 app.use("/",express.static("uploads"));
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
-app.use(cors());
+app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 // config
 if (process.env.NODE_ENV !== "PRODUCTION") {
     require("dotenv").config({
@@ -27,6 +26,8 @@ app.use('/products', express.static(path.join(__dirname, 'products')));
 const user = require("./controller/user");
 const product = require('./controller/product');
 const orders = require('./controller/order');
+
+
 
 app.use("/api/v2/user", user);
 app.use("/api/v2/product", product);
