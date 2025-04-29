@@ -1,15 +1,19 @@
 
 import { React, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { useDispatch } from 'react-redux';
 import { setemail } from "../../store/userAction";
+// Ensure axios sends cookies with requests
+axios.defaults.withCredentials = true;
+
 
 const Login = () => {
   // State to hold email and password values
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(""); // For handling error messages
+  const Navigate=useNavigate();
 
   const dispatch = useDispatch();
 
@@ -22,6 +26,7 @@ const Login = () => {
 
       dispatch(setemail(email));
       // Assuming response contains a token or user data on successful login
+      Navigate("/")
       console.log(response.data);
       // Redirect or take some action upon successful login here
     } catch (error) {

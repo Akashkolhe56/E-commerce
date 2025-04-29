@@ -3,13 +3,19 @@ import axios from 'axios';
 import Nav from '../components/auth/nav';
 import { FaBox, FaShippingFast, FaTimesCircle } from 'react-icons/fa';
 
+import { useSelector } from 'react-redux'; // Import useSelector
+
+
+
 const MyOrdersPage = () => {
     const [orders, setOrders] = useState([]);
-    const defaultEmail = 'akashc@gmail.com';
+    const defaultEmail = useSelector((state) => state.user.email);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    
 
     const fetchOrders = async () => {
+        if (!defaultEmail) return;
         try {
             setLoading(true);
             setError('');
