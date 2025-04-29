@@ -50,3 +50,13 @@ Key learnings -
 - Learned how to use the mongodb database and connect it with our server code.
 - Learned to use jsonWebTokens for authentications.
 - And finally learned to effectively handle the errors.
+
+
+## Milestone-6 -overview-
+In this milestone we learned the following things -
+
+Key learnings -
+
+- We learned to hashe the password.
+- We also learned how to store the user credentials.
+- We also implemented the logic of if the user exists, if user not exists then we have created the user.
